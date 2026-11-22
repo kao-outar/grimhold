@@ -1,0 +1,75 @@
+{
+  "title": "La Couronne de Brume",
+  "prologue": "Aux carrefours de Grimhold, la brume ne se lève jamais vraiment. Une couronne oubliée y pourrit, et quelque chose au sommet de la Flèche Lugubre en tire encore le fil. On dit qu'un héraut de pierre attend ceux assez fous pour écouter.",
+  "acts": [
+    {
+      "id": 0,
+      "title": "Prologue — Le Marqueur",
+      "objective": "Parle au héraut de pierre aux carrefours (commande: talk)",
+      "region": "crossroads",
+      "grant_flag": "met_herald",
+      "on_grant": "Le héraut de pierre s'anime. « Quatre éclats. Une cloche. Une clé brisée. Puis la Flèche. Choisis bien comment tu termineras. »"
+    },
+    {
+      "id": 1,
+      "title": "Acte I — L'Éclat du Marais",
+      "objective": "Explore le Marais Cendreux et vaincs des ennemis jusqu'à trouver l'Éclat de Brume",
+      "region": "ashen-marsh",
+      "grant_flag": "shard_marsh",
+      "kills_needed": 2,
+      "on_grant": "Dans la vase, un éclat de verre noir pulse d'une lueur froide. Tu l'as. L'Éclat de Brume est à toi."
+    },
+    {
+      "id": 2,
+      "title": "Acte II — La Cloche Immersée",
+      "objective": "À la Chapelle Noyée, explore jusqu'à la rencontre scriptée de la Cloche",
+      "region": "drowned-chapel",
+      "grant_flag": "bell",
+      "scripted_explore": true,
+      "on_grant": "Sous l'eau noire, la Cloche Immersée résonne sans son. Tu la ramènes à la surface — le monde semble retenir son souffle."
+    },
+    {
+      "id": 3,
+      "title": "Acte III — Les Demi-Clés",
+      "objective": "Récupère les deux fragments : un dans les Terriers de Fer, un dans le Tumulus Englouti",
+      "region": "",
+      "grant_flag": "key_complete",
+      "requires_flags": ["key_half_a", "key_half_b"],
+      "on_grant": "Les deux fragments s'emboîtent dans un cliquetis d'os. La Clé de Brume est entière. La Flèche Lugubre t'attend."
+    },
+    {
+      "id": 4,
+      "title": "Acte IV — La Flèche Lugubre",
+      "objective": "Atteins la Flèche (niveau ≥ 2), affronte le Wraith, puis choisis: choose mercy | choose wrath",
+      "region": "bleak-spire",
+      "grant_flag": "boss_felled",
+      "boss_slug": "wraith",
+      "min_level": 2,
+      "on_grant": "Le Wraith de la Flèche s'effondre, encore conscient. La couronne de brume tremble. Épargne-le (choose mercy) ou achève-le (choose wrath)."
+    }
+  ],
+  "region_flags": {
+    "iron-warren": {
+      "flag": "key_half_a",
+      "kills_needed": 2,
+      "on_grant": "Au fond d'un puits de mine, un fragment de clé osseuse. Demi-clé A."
+    },
+    "sunken-barrow": {
+      "flag": "key_half_b",
+      "kills_needed": 2,
+      "on_grant": "Dans une niche funéraire, le second fragment. Demi-clé B."
+    }
+  },
+  "endings": {
+    "mercy": {
+      "flag": "ending_mercy",
+      "title": "Fin — Brume apaisée",
+      "text": "Tu baisses l'arme. Le Wraith s'incline, et la couronne se dissout en pluie douce. Grimhold respire. Les chemins restent dangereux — mais la brume, désormais, a un maître moins cruel : le silence."
+    },
+    "wrath": {
+      "flag": "ending_wrath",
+      "title": "Fin — Couronne brisée",
+      "text": "Tu frappes. La couronne éclate en mille éclats noirs. La Flèche s'effondre. Tu as gagné — et quelque chose d'ancien, quelque part sous la terre, vient de s'ouvrir à la place."
+    }
+  }
+}

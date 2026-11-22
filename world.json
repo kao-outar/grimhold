@@ -1,0 +1,61 @@
+{
+  "start": "crossroads",
+  "regions": [
+    {
+      "id": "crossroads",
+      "name": "Les Carrefours",
+      "description": "Un marqueur de pierre usé se dresse au croisement de cinq sentiers boueux. Des corbeaux observent depuis un gibet de travers. C'est le seul endroit qui sent encore la terre ordinaire. Un héraut de pierre attend qu'on lui parle.",
+      "danger": 0,
+      "foes": ["rat", "giant-rat"],
+      "exits": ["ashen-marsh", "drowned-chapel", "iron-warren", "bleak-spire"],
+      "quest_hint": "Tape 'talk' pour écouter le héraut et commencer La Couronne de Brume."
+    },
+    {
+      "id": "ashen-marsh",
+      "name": "Marais Cendreux",
+      "description": "Brouillard, fer, et des choses qui respirent sous l'eau. Les roseaux cachent des îlots blancs comme des os ; chaque pas s'enfonce un peu plus.",
+      "danger": 1,
+      "foes": ["goblin", "skeleton", "ghoul"],
+      "exits": ["crossroads", "drowned-chapel", "sunken-barrow"],
+      "quest_hint": "Explore et combats pour trouver l'Éclat de Brume."
+    },
+    {
+      "id": "drowned-chapel",
+      "name": "Chapelle Noyée",
+      "description": "Le vitrail pend en éclats sous l'eau noire. Les bancs flottent comme des cercueils. Quelque chose sonne encore la cloche immergée au crépuscule.",
+      "danger": 2,
+      "foes": ["skeleton", "zombie", "shadow", "wight"],
+      "exits": ["crossroads", "ashen-marsh", "bleak-spire"],
+      "quest_hint": "Explore ici pour récupérer la Cloche Immersée (après l'Éclat)."
+    },
+    {
+      "id": "iron-warren",
+      "name": "Terriers de Fer",
+      "description": "Des tunnels étayés de rails rouillés et de manches de pioche. L'air a un goût de cuivre. Au loin, un martèlement qui ne suit jamais vraiment tes pas.",
+      "danger": 2,
+      "foes": ["goblin", "hobgoblin", "bugbear", "ogre"],
+      "exits": ["crossroads", "sunken-barrow"],
+      "quest_hint": "Vaincs des ennemis pour trouver la demi-clé A."
+    },
+    {
+      "id": "sunken-barrow",
+      "name": "Tumulus Englouti",
+      "description": "Un tertre funéraire à demi avalé par la tourbe. Des niches bordent l'escalier en spirale ; la plupart sont vides. La plupart.",
+      "danger": 3,
+      "foes": ["ghoul", "wight", "mummy", "ghost"],
+      "exits": ["ashen-marsh", "iron-warren", "bleak-spire"],
+      "quest_hint": "Vaincs des ennemis pour trouver la demi-clé B."
+    },
+    {
+      "id": "bleak-spire",
+      "name": "Flèche Lugubre",
+      "description": "Une aiguille de basalte perce les nuages bas. Le vent hurle dans les meurtrières. Au sommet, quelque chose de plus vieux que les couronnes attend les challengers assez forts — et munis de la Clé.",
+      "danger": 4,
+      "foes": ["wraith", "vampire-spawn"],
+      "exits": ["crossroads", "drowned-chapel", "sunken-barrow"],
+      "quest_hint": "Niveau ≥ 2 + Clé de Brume. Explore pour affronter le Wraith.",
+      "min_level": 2,
+      "boss": "wraith"
+    }
+  ]
+}
